@@ -1,26 +1,50 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 1) Defina as CORES e FONTES dentro de @theme (Tailwind v4) */
+@theme {
+  /* Cores institucionais */
+  --color-azul: #009FE3;
+  --color-amarelo: #FFD200;
+  --color-vermelho: #E30613;
+  --color-preto: #1C1C1C;
+  --color-branco: #FFFFFF;
+
+  /* Mapeia as fontes para utilitários font-title / font-body */
+  --font-title: var(--font-league), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-body: var(--font-open), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #171717;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md border font-semibold shadow-sm 
+    transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Botão vermelho (principal) */
+  .btn-vermelho {
+    @apply border-vermelho bg-vermelho text-branco px-6 py-2.5 
+    hover:bg-branco hover:text-vermelho hover:shadow-md 
+    focus:ring-vermelho;
+  }
+
+  /* Botão azul (secundário, documentos) */
+  .btn-azul {
+    @apply border-azul bg-azul text-branco px-6 py-2.5 
+    hover:bg-branco hover:text-azul hover:shadow-md 
+    focus:ring-vermelho; /* foco agora vermelho */
+  }
+
+  /* Links do menu de navegação */
+  .nav-link {
+    @apply text-preto font-medium transition-colors duration-150 hover:text-azul focus:text-azul focus:outline-none;
+  }
+
+  .nav-active {
+    @apply text-azul font-semibold;
+  }
 }
