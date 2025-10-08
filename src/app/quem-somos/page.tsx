@@ -143,7 +143,7 @@ export default function Page() {
             </div> */}
             <h3 className="font-title text-xl mb-2">Dina</h3>
             <p className="text-neutral-600">
-              (em breve — Morais, pode me informar o texto da Dina e eu ajusto a diagramação para manter o mesmo padrão)
+              (Presidente do Instituto Pedro Henrique de Direitos Humanos)
             </p>
           </article>
         </div>
