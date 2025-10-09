@@ -1,9 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-neutral-200 bg-neutral-50">
-      <div className="mx-auto max-w-6xl px-4 py-6">
-        <p className="text-center text-sm text-neutral-700 font-body">
+    <footer className="bg-neutral-100 text-neutral-700 text-sm mt-10">
+      <div className="max-w-6xl mx-auto px-4 py-6 text-center space-y-2">
+        <p>
           © 2025 Instituto Pedro Henrique de Direitos Humanos | CNPJ 31.146.036/0001-01
+        </p>
+        <p>
+          📞 (11) 97682-0075 | Estrada da Cachoeira, 147 – Jardim Paulistano, São Paulo – SP
         </p>
       </div>
     </footer>
