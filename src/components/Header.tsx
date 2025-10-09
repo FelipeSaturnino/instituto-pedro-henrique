@@ -10,10 +10,11 @@ export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  // links “normais” (sem o Doe)
   const links = [
     { href: "/", label: "Início" },
     { href: "/quem-somos", label: "Quem somos" },
-/*    { href: "/atividades", label: "Atividades" }, */
+    { href: "/atividades", label: "Atividades" },
     { href: "/transparencia", label: "Transparência" },
     { href: "/contato", label: "Contato" },
   ];
@@ -21,23 +22,22 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-branco shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        {/* Logo */}
-<Link href="/" className="flex items-center gap-2">
-  <div className="relative w-[220px] h-[65px] md:w-[260px] md:h-[75px]">
-    <Image
-      src="/logo.png"
-      alt="Logo do Instituto Pedro Henrique de Direitos Humanos"
-      fill
-      className="object-contain"
-      priority
-      sizes="(max-width: 768px) 220px, 260px"
-    />
-  </div>
-</Link>
-
+        {/* Logo responsivo */}
+        <Link href="/" className="flex items-center gap-2">
+          <div className="relative w-[220px] h-[65px] md:w-[260px] md:h-[75px]">
+            <Image
+              src="/logo.png"
+              alt="Logo do Instituto Pedro Henrique de Direitos Humanos"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 768px) 220px, 260px"
+            />
+          </div>
+        </Link>
 
         {/* Menu desktop */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex items-center gap-6">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
@@ -50,6 +50,14 @@ export default function Header() {
               </Link>
             );
           })}
+
+          {/* Botão DOE (sempre por último) */}
+          <Link
+            href="/doe"
+            className="btn btn-vermelho"
+          >
+            Doe
+          </Link>
         </nav>
 
         {/* Botão mobile */}
@@ -74,8 +82,8 @@ export default function Header() {
                     href={link.href}
                     className={`block rounded-md px-3 py-2 text-sm font-medium ${
                       active
-                        ? "text-azul bg-neutral-100"
-                        : "text-preto hover:text-azul hover:bg-neutral-50"
+                        ? "text-vermelho bg-neutral-100"
+                        : "text-preto hover:text-vermelho hover:bg-neutral-50"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
@@ -84,6 +92,17 @@ export default function Header() {
                 </li>
               );
             })}
+
+            {/* Botão DOE no mobile (destaque) */}
+            <li className="pt-2">
+              <Link
+                href="/doe"
+                className="btn btn-vermelho w-full justify-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Doe
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
