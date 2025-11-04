@@ -63,7 +63,7 @@ export default function Page() {
           <div className="rounded-lg bg-neutral-50 border border-neutral-200 p-4">
             <h3 className="font-title text-lg mb-2">PIX</h3>
             <p className="text-neutral-700">
-              <span className="font-medium">Chave:</span> 31146036000101
+              <span className="font-medium">Chave:</span> 31.146.036/0001-01
             </p>
             <p className="mt-2 text-sm text-neutral-600">
               Use o seu app do banco para pagar via PIX usando a chave acima.

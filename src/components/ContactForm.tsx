@@ -55,7 +55,7 @@ export default function ContactForm() {
       data.append("Assunto", current.assunto);
       data.append("Mensagem", current.mensagem);
 
-      const response = await fetch("https://formsubmit.co/institutopedrohenriquedh@gmail.com", {
+      const response = await fetch("https://formsubmit.co/contato@institutopedrohenrique.org.br", {
         method: "POST", body: data,
       });
 

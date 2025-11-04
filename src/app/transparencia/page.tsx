@@ -40,14 +40,14 @@ export default function Page() {
         <h2 className="font-title text-xl mb-4">Documentos</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Estatuto */}
+          {/* Termo de posse */}
           <a
-            href="/docs/estatuto-consolidado-iphdh.pdf"
+            href="/docs/termo-de-posse-diretores-2023.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
           >
-            ESTATUTO
+            TERMO DE POSSE (2023)
             <svg
               className="ml-2 h-5 w-5"
               viewBox="0 0 20 20"
@@ -59,7 +59,26 @@ export default function Page() {
             </svg>
           </a>
 
-          {/* Ata de Fundação */}
+          {/* Ata da assembleia 2023 */}
+          <a
+            href="/docs/ata-assembleia-geral-2023.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            ATA DA ASSEMBLEIA (2023)
+            <svg
+              className="ml-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M9 2a1 1 0 112 0v9.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4A1 1 0 116.707 9.293L9 11.586V2z" />
+              <path d="M3 13a1 1 0 011-1h2a1 1 0 110 2H5v2h10v-2h-1a1 1 0 110-2h2a1 1 0 011 1v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3z" />
+            </svg>
+          </a>
+
+          {/* Ata de fundação */}
           <a
             href="/docs/ata-de-fundacao-iphdh.pdf"
             target="_blank"
@@ -77,8 +96,26 @@ export default function Page() {
               <path d="M3 13a1 1 0 011-1h2a1 1 0 110 2H5v2h10v-2h-1a1 1 0 110-2h2a1 1 0 011 1v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3z" />
             </svg>
           </a>
-        </div>
 
+          {/* Estatuto */}
+          <a
+            href="/docs/estatuto-consolidado-iphdh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            ESTATUTO CONSOLIDADO
+            <svg
+              className="ml-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M9 2a1 1 0 112 0v9.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4A1 1 0 116.707 9.293L9 11.586V2z" />
+              <path d="M3 13a1 1 0 011-1h2a1 1 0 110 2H5v2h10v-2h-1a1 1 0 110-2h2a1 1 0 011 1v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3z" />
+            </svg>
+          </a>
+        </div>
       </section>
     </main>
   );
