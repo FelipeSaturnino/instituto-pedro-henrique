@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Flag, Eye, HeartHandshake } from "lucide-react";
 
 export const metadata = {
   title: "Quem somos | Instituto Pedro Henrique de Direitos Humanos",
@@ -55,19 +56,8 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start relative z-10">
           {/* Missão */}
           <div className="flex flex-col items-start md:items-center text-left md:text-center">
-            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0">
-              <svg
-                width="44"
-                height="44"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="1.8"
-              >
-                <path d="M8 3v14" />
-                <path d="M8 5h8l-2 3 2 3H8" />
-                <path d="M3 21h18" />
-              </svg>
+            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0 bg-white/5">
+              <Flag className="h-10 w-10" />
             </div>
             <h2 className="font-title text-2xl mb-2">Missão</h2>
             <p className="opacity-95 leading-relaxed">
@@ -82,21 +72,8 @@ export default function Page() {
 
           {/* Visão */}
           <div className="flex flex-col items-start md:items-center text-left md:text-center">
-            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0">
-              <svg
-                width="44"
-                height="44"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="1.8"
-              >
-                <path d="M3 20h18" />
-                <path d="M7 16v-3" />
-                <path d="M12 16v-6" />
-                <path d="M17 16v-9" />
-                <path d="M14 5c2 2 4 2 7 0" strokeLinecap="round" />
-              </svg>
+            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0 bg-white/5">
+              <Eye className="h-10 w-10" />
             </div>
             <h2 className="font-title text-2xl mb-2">Visão</h2>
             <p className="opacity-95 leading-relaxed">
@@ -109,19 +86,8 @@ export default function Page() {
 
           {/* Valores */}
           <div className="flex flex-col items-start md:items-center text-left md:text-center">
-            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0">
-              <svg
-                width="44"
-                height="44"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="1.8"
-              >
-                <path d="M7 20s-2-1-2-3 2-3 2-3l4-2" strokeLinecap="round" />
-                <path d="M17 20s2-1 2-3-2-3-2-3l-4-2" strokeLinecap="round" />
-                <path d="M9 8l1 1M12 7l1 1M15 8l1 1" strokeLinecap="round" />
-              </svg>
+            <div className="mb-4 md:mb-6 flex items-center justify-center border-2 border-white rounded-full h-24 w-24 shrink-0 bg-white/5">
+              <HeartHandshake className="h-10 w-10" />
             </div>
             <h2 className="font-title text-2xl mb-2">Valores</h2>
             <p className="opacity-95 leading-relaxed">
@@ -143,12 +109,13 @@ export default function Page() {
 
         {/* Foto conjunta + legenda */}
         <figure className="mb-6">
-          <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-md border border-neutral-200">
+          <div className="overflow-hidden rounded-xl shadow-md border border-neutral-200">
             <Image
               src="/fundadores/fundadores.jpg"
               alt="Dinair Nunes da Silva e Suzimar Wacton de Morais"
-              fill
-              className="object-cover"
+              width={1186}
+              height={667}
+              className="w-full h-auto"
               priority
             />
           </div>
@@ -160,45 +127,50 @@ export default function Page() {
 
         {/* Caixas individuais (Dinair primeiro) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Dinair */}
+          {/* Dina */}
           <article className="border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-md transition bg-neutral-50">
-            <h3 className="font-title text-xl mb-3 text-[#E30613]">
-              Dina
-            </h3>
+            <h3 className="font-title text-xl mb-3 text-[#E30613]">Dina</h3>
             <p className="text-neutral-800 leading-relaxed">
-              Dinair Nunes da Silva é fundadora e presidente do Instituto Pedro Henrique de Direitos Humanos. Mãe de Pablo, Gabriella e do eterno adolescente Pedro Henrique, transformou a dor da perda do filho em 2016 em força para atuar na defesa da vida e na promoção dos direitos humanos.
+              Dinair Nunes da Silva é fundadora e presidente do Instituto Pedro
+              Henrique de Direitos Humanos. Mãe de Pablo, Gabriella e do eterno
+              adolescente Pedro Henrique, transformou a dor da perda do filho em
+              2016 em força para atuar na defesa da vida e na promoção dos
+              direitos humanos.
             </p>
             <p className="text-neutral-800 leading-relaxed mt-3">
-              Sob sua liderança, o Instituto tornou-se referência na periferia de São Paulo, desenvolvendo projetos que unem conhecimento, ação social e articulação entre poder público e sociedade civil.
+              Sob sua liderança, o Instituto tornou-se referência na periferia
+              de São Paulo, desenvolvendo projetos que unem conhecimento, ação
+              social e articulação entre poder público e sociedade civil.
             </p>
             <p className="text-neutral-800 leading-relaxed mt-3">
-              Sua trajetória é marcada pela resiliência e por uma maternagem social que ultrapassa o âmbito familiar. Dinair mantém viva a memória do filho ao construir, todos os dias, caminhos de paz e oportunidades para a juventude.
+              Sua trajetória é marcada pela resiliência e por uma maternagem
+              social que ultrapassa o âmbito familiar. Dinair mantém viva a
+              memória do filho ao construir, todos os dias, caminhos de paz e
+              oportunidades para a juventude.
             </p>
           </article>
 
           {/* Suzimar */}
           <article className="border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-md transition bg-neutral-50">
-            <h3 className="font-title text-xl mb-3 text-[#E30613]">
-              Morais
-            </h3>
+            <h3 className="font-title text-xl mb-3 text-[#E30613]">Morais</h3>
             <p className="text-neutral-800 leading-relaxed">
-              Suzimar Wacton de Morais, pai de Pedro Henrique Nunes de Morais, é assistente social e mestre
-              em Psicologia Social. Nascido em Natal (RN) e residente há mais de
-              três décadas na Brasilândia, zona norte de São Paulo, construiu sua
-              trajetória marcada pela superação e pelo compromisso com o social.
+              Suzimar Wacton de Morais, pai de Pedro Henrique Nunes de Morais, é
+              assistente social e mestre em Psicologia Social. Nascido em Natal
+              (RN) e residente há mais de três décadas na Brasilândia, zona
+              norte de São Paulo, construiu sua trajetória marcada pela
+              superação e pelo compromisso com o social.
             </p>
             <p className="text-neutral-800 leading-relaxed mt-3">
-            Em 2017, após a morte de seu filho Pedro Henrique, vítima de ação
+              Em 2017, após a morte de seu filho Pedro Henrique, vítima de ação
               letal do Estado aos 17 anos, transformou a dor em propósito ao
               fundar o Instituto Pedro Henrique de Direitos Humanos, uma
               organização sem fins lucrativos dedicada à defesa da vida, à
               promoção da cultura de paz e à valorização da dignidade humana.
             </p>
-           <p className="text-neutral-800 leading-relaxed mt-3">
+            <p className="text-neutral-800 leading-relaxed mt-3">
               Movido pelo amor à profissão e ao próximo, acredita que o respeito
               ao ser humano é a base de qualquer transformação social.
-            </p> 
-
+            </p>
           </article>
         </div>
       </section>

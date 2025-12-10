@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="bg-[#E30613] p-10">
 
           <Link
-            href="/atividades"
+            href="/projetos"
             className="inline-block mt-4 text-sm font-semibold underline-offset-4 hover:text-white"
           >
           <h2 className="text-2xl font-bold mb-1">Nossos projetos</h2>

@@ -14,7 +14,7 @@ export default function Header() {
   const links = [
     { href: "/", label: "Início" },
     { href: "/quem-somos", label: "Quem somos" },
-    { href: "/atividades", label: "Atividades" },
+    { href: "/projetos", label: "Projetos" },
     { href: "/transparencia", label: "Transparência" },
     { href: "/contato", label: "Contato" },
   ];

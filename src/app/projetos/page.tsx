@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Atividades | Instituto Pedro Henrique de Direitos Humanos",
+  title: "Projetos | Instituto Pedro Henrique de Direitos Humanos",
   description:
     "Conheça os projetos do Instituto Pedro Henrique de Direitos Humanos.",
 };
@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
       <header className="mb-8">
-        <h1 className="font-title text-3xl mb-2">Atividades</h1>
+        <h1 className="font-title text-3xl mb-2">Projetos</h1>
         <p className="text-neutral-700">
           Conheça alguns dos projetos desenvolvidos pelo Instituto Pedro Henrique
           de Direitos Humanos junto à comunidade.
